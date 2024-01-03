@@ -1,0 +1,7 @@
+# ignore jar files
+*.jar
+
+# ignore the .vscode config folder
+.vscode/
+
+
