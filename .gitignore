@@ -4,4 +4,5 @@
 # ignore the .vscode config folder
 .vscode/
 
-
+# ignore .DS_Store in MacOS
+.DS_Store
