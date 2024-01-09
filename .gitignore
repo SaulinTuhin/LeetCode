@@ -6,3 +6,6 @@
 
 # ignore .DS_Store in MacOS
 .DS_Store
+
+# ignore output files
+Cpp/output/
