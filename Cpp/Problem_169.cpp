@@ -21,7 +21,7 @@ public:
         return -1;
     }
 
-    // O(1) -> Space complexity [Boyer-Moore Voting Algorithm]
+    // O(1) -> Space complexity [Boyer-Moore Algorithm]
     int majorityElement(vector<int>& nums) {
         int res = 0, count = 0;
 
