@@ -38,6 +38,32 @@ public:
 
         return list1;
     }
+
+    ListNode* mergeInBetween_memSafe(ListNode* list1, int a, int b, ListNode* list2) {
+        ListNode* start = list1;
+
+        int i = 0;
+        while (i < a - 1) {
+            start = start->next;
+            i++;
+        }
+
+        ListNode* end = start->next;
+        while (i < b) {
+            ListNode* tmp = end;
+            end = end->next;
+            delete tmp;
+            i++;
+        }
+
+        start->next = list2;
+        while (list2->next)
+            list2 = list2->next;
+
+        list2->next = end;
+
+        return list1;
+    }
 };
 
 ListNode* makeList(vector<int>& list) {
