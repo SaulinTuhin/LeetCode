@@ -17,7 +17,7 @@ class Solution:
                 dp[idx] = nums[i]
             lis[i] = len(dp)
         
-        dp = []    
+        dp = []
         lds = [1] * N
         for i in reversed(range(N)):
             idx = bisect_left(dp, nums[i])
@@ -31,6 +31,35 @@ class Solution:
         for i in range(1, N - 1):
             if lis[i] > 1 and lds[i] > 1:
                 res = min(res, N - lis[i] - lds[i] + 1)
+        return res
+    
+    def minimumMountainRemovals_minorImprovement(self, nums: List[int]) -> int:
+        N = len(nums)
+        
+        dp = []
+        mountain_width = [1] * N
+        for i in range(N):
+            idx = bisect_left(dp, nums[i])
+            if idx == len(dp):
+                dp.append(nums[i])
+            else:
+                dp[idx] = nums[i]
+            mountain_width[i] = len(dp)
+        
+        res = N
+        dp = []
+        for i in reversed(range(N)):
+            if mountain_width[i] == 1:
+                continue
+            idx = bisect_left(dp, nums[i])
+            if idx == len(dp):
+                dp.append(nums[i])
+            else:
+                dp[idx] = nums[i]
+            if len(dp) == 1:
+                continue
+            mountain_width[i] += len(dp) - 1
+            res = min(res, N - mountain_width[i])
         return res
     
     def minimumMountainRemovals_LIS(self, nums: List[int]) -> int:
