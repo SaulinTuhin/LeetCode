@@ -5,7 +5,7 @@ from bisect import bisect
 # Python3 Solution!
 class Solution:
     def maximumBeauty(self, items: List[List[int]], queries: List[int]) -> List[int]:
-        items = sorted(items)
+        items.sort(key=lambda x: x[0])
         for i in range(1, len(items)):
             items[i][1] = max(items[i - 1][1], items[i][1])
 
