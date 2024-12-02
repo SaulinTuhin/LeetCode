@@ -1,4 +1,4 @@
-# Problem - 455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
+# Problem - 1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
 # Python3 Solution!
 class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
