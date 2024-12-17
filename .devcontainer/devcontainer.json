@@ -10,12 +10,7 @@
 			"version": "latest"
 		},
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "17",
-			"jdkDistro": "open",
-			"gradleVersion": "latest",
-			"mavenVersion": "latest",
-			"antVersion": "latest",
-			"groovyVersion": "latest"
+			"version": "latest"
 		}
 	}
 
