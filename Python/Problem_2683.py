@@ -1,5 +1,7 @@
 from typing import List
 
+# Problem - 2683. Neighboring Bitwise XOR
+# Python3 Solution!
 class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
         return sum(derived) % 2 == 0
